@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #result {
+            display: grid;
+            grid-template-columns: repeat(4, 20%);
+            grid-gap: 5%;
+            margin-top: 20px;
+
+        }
+        h3 {
+            cursor: pointer;
+        }
+
+        #nav {
+            background-color: black;
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        #qry {
+            width: 30%;
+            padding: 10px;
+        }
+        button,a {
+            padding: 10px;
+            background-color: transparent;
+            color: bisque;
+            font-size: larger;
+        }
+        a {
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a href="index.html"><i class="fa fa-home"></i></a>
+    <input type="text" name="" id="qry" placeholder="search...">
+    <button onclick="search()"><i class="fa fa-search"></i></button></div>
+
+    <div id="result"></div>
+</body>
+<script src="youtube.js"></script>
+</html>

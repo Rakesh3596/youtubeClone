@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #show {
+            width: 80%;
+            height: 600px;            
+            margin: auto;
+        }
+        iframe {
+            width: 100%;
+            height: 95%;
+            
+        }
+        h3 {
+            text-align: center;
+        }
+
+        #nav {
+            background-color: black;
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        #qry {
+            width: 30%;
+            padding: 10px;
+        }
+        button,a {
+            padding: 10px;
+            background-color: transparent;
+            color: bisque;
+            font-size: larger;
+        }
+        a {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a href="index.html"><i class="fa fa-home"></i></a>
+    <input type="text" name="" id="qry" placeholder="search...">
+    <button onclick="search()"><i class="fa fa-search"></i></button></div>
+    <div id="show"></div>
+
+    
+</body>
+<script>
+    let vid=JSON.parse(localStorage.getItem('video'))
+    let show=document.getElementById('show')
+    let iframe=document.createElement('iframe')
+        iframe.src=`https://www.youtube.com/embed/${vid.videoId}?autoplay=1&mute=1`;
+        iframe.allow='fullscreen'
+        let h3=document.createElement('h3');
+        h3.innerText=vid.title;
+        
+        show.append(iframe,h3);
+    
+</script>
+
+</html>
+
+<!-- title: "Marvel Studios&#39; Thor: Love and Thunder | Official Hindi Trailer | In Cinemas 8 July 2022" -->
+<!-- videoId: "sFTD5vBfRGY" -->
